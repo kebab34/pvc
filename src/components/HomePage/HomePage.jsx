@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from './Carousel/Carousel';
+import SEO from '../SEO/SEO';
 import { pvcCategories, pvcProducts } from '../../data/pvcData';
 import './HomePage.css';
 
 const HomePage = () => (
   <main>
+    <SEO canonical="/" />
     <Carousel />
 
     {/* ── Intro ─────────────────────────────────────────────── */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import SEO from '../SEO/SEO';
 import { pvcProducts, pvcCategories } from '../../data/pvcData';
 import './ProductDetailPage.css';
 
@@ -29,6 +30,11 @@ const ProductDetailPage = () => {
 
   return (
     <section className="mdet-page">
+      <SEO
+        title={product.name}
+        description={product.description.slice(0, 155)}
+        canonical={`/produits/${product.id}`}
+      />
       {/* Breadcrumb */}
       <div className="mdet-breadcrumb">
         <Link to="/produits" className="mdet-bread-link">Produits</Link>

@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import SEO from '../SEO/SEO';
 import { pvcCategories, pvcProducts } from '../../data/pvcData';
 import './ProductsPage.css';
 
@@ -28,6 +29,11 @@ const ProductsPage = () => {
 
   return (
     <section className="men-page">
+      <SEO
+        title="Nos Produits PVC — Portes, Fenêtres & Coulissants"
+        description="Découvrez notre gamme complète de portes PVC, fenêtres PVC et coulissants. Profils Aluplast 70/85mm et IDEAL 2000/4000/7000/8000 à Cannes."
+        canonical="/produits"
+      />
       <div className="men-header">
         <div className="men-gold-line" />
         <h1 className="men-title">NOS PRODUITS PVC</h1>
