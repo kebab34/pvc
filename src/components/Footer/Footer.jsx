@@ -1,11 +1,12 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../../image/logo2.png';
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer-content">
       <div className="footer-column">
-        <div className="footer-logo">DEKOR & DESIGN <span>PVC</span></div>
+        <img src={logo} alt="Dekor & Design PVC" className="logo" />
         <div className="gold-line" />
         <p className="footer-tagline">Spécialiste portes & fenêtres PVC — Cannes, Côte d'Azur</p>
       </div>
