@@ -1,0 +1,156 @@
+.home-intro {
+  text-align: center;
+  padding: 80px 60px;
+  background-color: #0a0a0a;
+}
+
+.home-gold-line {
+  width: 60px;
+  height: 1px;
+  background-color: #d4af37;
+  margin: 0 auto 28px;
+}
+
+.home-intro-title {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.home-intro-text {
+  font-size: 15px;
+  color: #888;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── Catégories ─────────────────────────────────────────────── */
+.home-cats {
+  background-color: #080808;
+  padding: 0 60px 80px;
+}
+
+.home-cats-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.home-cat-card {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #111;
+}
+
+.home-cat-img-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home-cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  transition: transform 0.6s ease;
+}
+
+.home-cat-card:hover .home-cat-img {
+  transform: scale(1.04);
+}
+
+.home-cat-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+}
+
+.home-cat-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px;
+}
+
+.home-cat-name {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.home-cat-count {
+  font-size: 11px;
+  color: #d4af37;
+  letter-spacing: 1.5px;
+}
+
+/* ── CTA ─────────────────────────────────────────────────────── */
+.home-cta {
+  text-align: center;
+  padding: 90px 60px;
+  background-color: #050505;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.home-cta-title {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.home-cta-text {
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 1px;
+  margin: 0 0 36px;
+}
+
+.home-cta-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+
+.home-cta-btn:hover {
+  background-color: #d4af37;
+  color: #0a0a0a;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .home-intro { padding: 60px 30px; }
+  .home-cats { padding: 0 0 60px; }
+  .home-cats-inner { grid-template-columns: 1fr; gap: 2px; }
+  .home-cat-card { aspect-ratio: 16/9; }
+  .home-cta { padding: 70px 30px; }
+}
+
+@media (max-width: 576px) {
+  .home-intro { padding: 50px 20px; }
+  .home-intro-title { font-size: 24px; letter-spacing: 3px; }
+  .home-cta { padding: 60px 20px; }
+}
