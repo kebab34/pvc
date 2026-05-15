@@ -100,6 +100,150 @@
   letter-spacing: 1.5px;
 }
 
+/* ── Portes Pivot ────────────────────────────────────────────── */
+.home-pivot {
+  background-color: #0a0a0a;
+  padding: 80px 60px;
+  border-top: 1px solid #161616;
+}
+
+.home-pivot-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home-pivot-title {
+  font-size: 32px;
+  font-weight: 200;
+  letter-spacing: 8px;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+.home-pivot-subtitle {
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.home-pivot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: 1400px;
+  margin: 0 auto 36px;
+}
+
+.home-pivot-card {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+}
+
+.home-pivot-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #111;
+}
+
+.home-pivot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.6s ease;
+  display: block;
+}
+.home-pivot-card:hover .home-pivot-img {
+  transform: scale(1.04);
+}
+
+.home-pivot-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+  transition: background 0.4s;
+}
+.home-pivot-card:hover .home-pivot-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.3) 65%, rgba(0,0,0,0.05) 100%);
+}
+
+.home-pivot-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 18px 20px;
+  z-index: 2;
+}
+
+.home-pivot-count {
+  display: block;
+  font-size: 10px;
+  color: #d4af37;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.home-pivot-name {
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: #fff;
+  margin: 0 0 7px;
+  line-height: 1.1;
+}
+
+.home-pivot-desc {
+  font-size: 11px;
+  color: #bbb;
+  letter-spacing: 0.4px;
+  margin: 0 0 14px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.home-pivot-card:hover .home-pivot-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-pivot-cta {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #d4af37;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 3px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.05s;
+}
+.home-pivot-card:hover .home-pivot-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-pivot-footer {
+  text-align: center;
+}
+
+.home-pivot-all {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: #888;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.home-pivot-all:hover { color: #d4af37; }
+
 /* ── CTA ─────────────────────────────────────────────────────── */
 .home-cta {
   text-align: center;
@@ -147,10 +291,22 @@
   .home-cats-inner { grid-template-columns: 1fr; gap: 2px; }
   .home-cat-card { aspect-ratio: 16/9; }
   .home-cta { padding: 70px 30px; }
+  .home-pivot { padding: 60px 24px; }
+  .home-pivot-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-pivot-title { font-size: 26px; letter-spacing: 6px; }
+  .home-pivot-desc, .home-pivot-cta { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 576px) {
   .home-intro { padding: 50px 20px; }
   .home-intro-title { font-size: 24px; letter-spacing: 3px; }
   .home-cta { padding: 60px 20px; }
+  .home-pivot { padding: 50px 0 60px; }
+  .home-pivot-header { padding: 0 20px; }
+  .home-pivot-title { font-size: 20px; letter-spacing: 5px; }
+  .home-pivot-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .home-pivot-name { font-size: 16px; letter-spacing: 4px; }
+  .home-pivot-info { padding: 18px 12px 14px; }
+  .home-pivot-desc { display: none; }
+  .home-pivot-footer { padding: 0 20px; }
 }

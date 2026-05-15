@@ -21,6 +21,7 @@ const Header = () => {
           <Link to="/produits?cat=portes" className="nav-link">PORTES PVC</Link>
           <Link to="/produits?cat=fenetres" className="nav-link">FENÊTRES PVC</Link>
           <Link to="/produits?cat=coulissants" className="nav-link">COULISSANTS PVC</Link>
+          <Link to="/portes-pivot" className="nav-link">PORTES PIVOT</Link>
           <Link to="/contact" className="nav-link">CONTACT</Link>
         </nav>
 
@@ -36,6 +37,7 @@ const Header = () => {
           <Link to="/produits?cat=portes" className="mobile-link" onClick={closeMenu}>PORTES PVC</Link>
           <Link to="/produits?cat=fenetres" className="mobile-link" onClick={closeMenu}>FENÊTRES PVC</Link>
           <Link to="/produits?cat=coulissants" className="mobile-link" onClick={closeMenu}>COULISSANTS PVC</Link>
+          <Link to="/portes-pivot" className="mobile-link" onClick={closeMenu}>PORTES PIVOT</Link>
           <Link to="/contact" className="mobile-link" onClick={closeMenu}>CONTACT</Link>
         </nav>
       )}
